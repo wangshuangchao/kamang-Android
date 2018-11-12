@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hui"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/activity_view"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="84px"
+        android:background="@mipmap/tu_bg1">
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="86px"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="20px"
+                android:layout_height="38px"
+                android:layout_marginLeft="24px"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/fanhui"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="系统消息"
+            android:textSize="32px"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/systemxiaoxi_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/hui"
+        android:divider="@null"
+        android:scrollbars="none"
+        android:visibility="gone">
+    </ListView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="暂无消息"
+        android:textSize="32px"
+        android:textColor="#333333"/>
+
+</LinearLayout>

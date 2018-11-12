@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mugua.enterprise">
+
+    <!-- //地图包、搜索包需要的基础权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- //定位包、导航包需要的额外权限（注：基础权限也需要） -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" /> -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.UPDATE_APP_OPS_STATS" />
+    <uses-permission android:name="android.permission.STATUS_BAR" />
+
+    <uses-permission android:name="android.permission.APP_NOTIFICATION_SETTINGS"/>
+
+    <!-- renren sso Permission for Unit Test -->
+    <!-- QQ、QQ空间所需权限 -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- 外置存储存取权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 允许程序写音频数据 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 允许程序使用PowerManager WakeLocks以防止处理器休眠或者屏幕锁屏 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 允许程序使用设备的camera -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 允许程序使用闪光灯 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <!-- 配置一个程序用于调试 -->
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+
+    <!-- 访问网络状态-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 控制呼吸灯，振动器等，用于新消息提醒 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 外置存储存取权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 多媒体相关 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <!-- 声明程序使用camera和自动对焦功能 -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <permission
+        android:name="${applicationId}.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature"/>
+
+    <!-- Required -->
+    <uses-permission android:name="${applicationId}.permission.JPUSH_MESSAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+     
+    <!-- 声明程序使用OpenGL ES 2.0 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"><!--Theme.AppCompat.DayNight.NoActionBar--><!--Theme.AppCompat.NoActionBar-->
+
+        <meta-data android:name="android.max_aspect"
+            android:resizeableActivity="true"
+            android:value="2.1"/>
+
+        <meta-data
+            android:name="design_width"
+            android:value="720" />
+        <meta-data
+            android:name="design_height"
+            android:value="1280" />
+
+        <activity android:name=".login.SplashActivity"
+            android:theme="@style/SplashTheme"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5a0660fcb27b0a34fa00023d" />
+        <!--<meta-datas-->
+            <!--android:name="UMENG_MESSAGE_SECRET"-->
+            <!--android:value="0edd1eab9bc9e963409f41d59f03fa5f" />-->
+        <!--<meta-data-->
+            <!--android:name="UMENG_CHANNEL"-->
+            <!--android:value="Channel ID" />-->
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.me.XiaoXiActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.me.SystemXiaoXiActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.me.SettingActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.me.UserFeedbackActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.me.RegardActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.me.TipoffActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.me.CardActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.me.EditDataActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.me.EditActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.me.ProductUploadActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.me.AddVideoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.me.EnterpriseCertificationActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.me.AllOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.me.InventoryActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.me.MoreActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.me.MyreleaseActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".Mall.Order_Details"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Mall.AddressActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Mall.NewAddressActivity"
+            android:screenOrientation="portrait"/>
+
+        <service android:name=".banben.DownloadService" />
+        <receiver android:name=".banben.NotificationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="stop"/>
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".login.LoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".login.RetrievePasswordActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".login.EditPasswordActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".login.RegistrationActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".login.YinDaoActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.FundsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ShowcasingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.Showcasing1Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.WebActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.TapingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SVideoUploadActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ParticularsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.HuoDongActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.CanYuActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.material.CommodityDetailsActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.home.SearchActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.home.SearchDetailsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.home.BrokenParticularsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.home.BrokenListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.home.ParticularsActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.lidong.photopicker.PhotoPickerActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.lidong.photopicker.PhotoPreviewActivity"
+            android:screenOrientation="portrait"/>
+
+        <!--时间适配器-->
+        <activity android:name=".util.pickerview.JsonDataActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".util.pickerview.MainActivity"
+            android:screenOrientation="portrait"></activity>
+
+
+        <activity
+            android:name="com.umeng.socialize.media.WBShareCallBackActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:exported="false"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:launchMode="singleTask"
+            android:name="com.sina.weibo.sdk.share.WbShareTransActivity">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+
+        <activity
+            android:name="com.umeng.socialize.editorpage.ShareActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.UMDefault"
+            />
+
+        <!--支付宝支付-->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+
+        <activity android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+
+        <!-- wechat callback-->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <!-- tencent -->
+        <activity
+            android:name="com.umeng.qq.tencent.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="tencent1106467599"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.umeng.qq.tencent.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+
+
+        <!--环信-->
+
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="jchat.db"/>
+        <meta-data
+            android:name="AA_MODELS"
+            android:value="com.mugua.jiguang.chat.database.UserEntry, com.mugua.jiguang.chat.database.FriendEntry,
+             com.mugua.jiguang.chat.database.FriendRecommendEntry, com.mugua.jiguang.chat.database.ConversationEntry"/>
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="4"/>
+
+        <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER"/>
+                <action android:name="cn.jpush.android.intent.REPORT"/>
+                <action android:name="cn.jpush.android.intent.PushService"/>
+                <action android:name="cn.jpush.android.intent.PUSH_TIME"/>
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY"/>
+
+                <category android:name="${applicationId}"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.im.android.helpers.IMReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.im.android.action.IM_RESPONSE"/>
+                <action android:name="cn.jpush.im.android.action.NOTIFICATION_CLICK_PROXY"/>
+
+                <category android:name="${applicationId}"/>
+            </intent-filter>
+        </receiver>
+
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+        </service>
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="UAkQeBK84ioVGzYgA1rSWYfuD4xYtpmV"/>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false"/>
+
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default"/>
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="dce3f45bd2902cc3c2c4b0ad"/>
+
+        <provider
+            android:name="cn.jpush.android.service.DataProvider"
+            android:authorities="${applicationId}.DataProvider"
+            android:exported="true" />
+
+
+        <activity
+            android:name="com.mugua.jiguang.chat.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.mugua.jiguang.chat.activity.BaseActivity"/>
+        <activity
+            android:name="com.mugua.jiguang.chat.activity.FinishRegisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.ResetPasswordActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.FeedbackActivity"/>
+        <!--这里有个需要注意的地方就是,自定义的弹窗需要自定义一个theme否则系统会默认给设置padding自己设置的属性不生效-->
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.PersonalActivity"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.NickSignActivity"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.SearchForAddFriendActivity"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.SearchFriendInfoActivity"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.VerificationActivity"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.FriendRecommendActivity"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.SearchFriendDetailActivity"/>
+
+        <activity
+            android:screenOrientation="portrait"
+            android:resizeableActivity="true"
+            android:name="com.mugua.jiguang.chat.activity.ChatActivity"
+            android:value="2.1"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.SearchContactsActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.utils.imagepicker.ImageBaseActivity"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.utils.imagepicker.ImageGridActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ImagePickerTheme"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.utils.imagepicker.ImageCropActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="false"
+            android:theme="@style/ImagePickerTheme"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.utils.imagepicker.ImagePreviewActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ImagePickerThemeFullScreen"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.utils.imagepicker.ImagePreviewDelActivity"
+            android:theme="@style/ImagePickerThemeFullScreen"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.pickerimage.PickerAlbumActivity"/>
+        <activity android:name="com.mugua.jiguang.chat.pickerimage.PickerAlbumPreviewActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.mugua.jiguang.chat.pickerimage.PickImageActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.mugua.jiguang.chat.activity.BrowserViewPagerActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.mugua.jiguang.chat.activity.historyfile.activity.BrowserFileImageActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.mugua.jiguang.chat.activity.WatchVideoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.SendFileActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppBaseTheme"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.historyfile.activity.HistoryFileActivity"
+            android:theme="@style/AppBaseTheme"/>
+        <activity android:name="com.mugua.jiguang.chat.activity.PlayVideoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.location.activity.MapPickerActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.FriendInfoActivity"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.ChatDetailActivity"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.MembersInChatActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.GroupActivity"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.SearchMoreFriendsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.SearchMoreGroupActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.FriendSettingActivity"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.SetNoteNameActivity"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.ChooseAtMemberActivity"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.GroupGridViewActivity"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.GroupNotFriendActivity"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.SelectFriendActivity"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.DownLoadActivity"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.CreateGroupActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name="com.mugua.jiguang.chat.utils.photovideo.takevideo.CameraActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseFullTheme"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.SearchGroupActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.SearchAtMemberActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.ForwardMsgActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.Person2CodeActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.ScanResultActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.CommonScanActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.receiptmessage.ReceiptMessageListActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.SearchFriendBusinessActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.FriendListActivity"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.NotFriendSettingActivity"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mugua.jiguang.chat.activity.GroupAvatarActivity"
+            android:theme="@style/AppTh"/>
+
+
+        <!--videoplayer-->
+
+        <activity
+            android:name="com.mugua.videoplayer.PlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mugua.videoplayer.ListVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mugua.videoplayer.ListVideo2Activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mugua.videoplayer.DetailPlayer"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mugua.videoplayer.RecyclerView2Activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mugua.videoplayer.DetailListPlayer"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mugua.videoplayer.WebDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mugua.videoplayer.RecyclerViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mugua.videoplayer.DanmkuVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mugua.videoplayer.FragmentVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mugua.videoplayer.DetailMoreTypeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mugua.videoplayer.InputUrlDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mugua.videoplayer.PlayEmptyControlActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mugua.videoplayer.DetailControlActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mugua.videoplayer.DetailFilterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

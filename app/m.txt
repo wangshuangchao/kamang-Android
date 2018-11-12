@@ -1,0 +1,73 @@
+//        UMWeb web = new UMWeb("https://wsq.umeng.com/");//连接地址
+//        web.setTitle("友盟微社区sdk，多终端一社区，为您的app添加社区就是这么简单");//标题
+//        web.setDescription("友盟微社区");//描述
+//        if (TextUtils.isEmpty("")) {
+//            web.setThumb(new UMImage(MainActivity.this, bitmap));  //本地缩略图
+//        } else {
+//            web.setThumb(new UMImage(MainActivity.this, ""));  //网络缩略图
+//        }
+                new ShareAction(getActivity())
+                        .setDisplayList(SHARE_MEDIA.SINA,SHARE_MEDIA.QQ,SHARE_MEDIA.WEIXIN,SHARE_MEDIA.WEIXIN_CIRCLE)
+                        .withMedia(new UMImage(getActivity(), R.mipmap.ic_launcher))
+//                .withMedia(web)
+                        .setCallback(umShareListener)
+                        .open();
+
+photopicker.jar//存放着布局，代码打包后部分功能会失去
+
+Picasso.with(ShowcasingActivity.this)
+                        .load(mList.get(position))
+                        .placeholder(R.drawable.zwt)//默认显示图片
+                        .error(R.drawable.zwt)//加载时出现错误显示的图片
+                        .fit()//计算出最佳的大小及最佳的图片质量来进行图片展示 (  减少内存 )
+                        .priority(HIGH)//底部的图片后加载,Picasso支持设置优先级,分为HIGH, MEDIUM, 和 LOW,所有的加载默认优先级为MEDIUM;
+                        .memoryPolicy(NO_CACHE, NO_STORE)//查看大图放弃缓存，加速内存的回收
+                        .tag("RecyclerView") //参数为 Object
+                        .rotate(90f) //旋转90度
+                        .resize(200,200)
+                        .centerCrop()//设置图片圆角
+                        .centerInside()
+                        .noFade()//Picasso的默认图片加载方式有一个淡入的效果,如果调用了noFade(),加载的图片将直接显示在ImageView上
+                        .into(holder.showcasing_icon);
+
+
+
+ //        authorization(SHARE_MEDIA.WEIXIN);
+//    //授权
+//    private void authorization(SHARE_MEDIA share_media) {
+//        UMShareAPI.get(this).getPlatformInfo(this, share_media, new UMAuthListener() {
+//            @Override
+//            public void onStart(SHARE_MEDIA share_media) {
+//            }
+//
+//            @Override
+//            public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
+//                //sdk是6.4.4的,但是获取值的时候用的是6.2以前的(access_token)才能获取到值,未知原因
+//                String uid = map.get("uid");
+//                String openid = map.get("openid");//微博没有
+//                String unionid = map.get("unionid");//微博没有
+//                String access_token = map.get("access_token");
+//                String refresh_token = map.get("refresh_token");//微信,qq,微博都没有获取到
+//                String expires_in = map.get("expires_in");
+//                String name = map.get("name");
+//                String gender = map.get("gender");
+//                String iconurl = map.get("iconurl");
+//                CustomToast.showToast(getApplicationContext(), "name=" + name + ",gender=" + gender, 1000);
+//            }
+//
+//            @Override
+//            public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
+//            }
+//
+//            @Override
+//            public void onCancel(SHARE_MEDIA share_media, int i) {
+//            }
+//        });
+//    }
+//
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        UMShareAPI.get(this).onActivityResult(requestCode, resultCode, data);
+//
+//    }

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <include
+            layout="@layout/activity_view"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="84px"
+            android:background="@mipmap/tu_bg1">
+            <RelativeLayout
+                android:id="@+id/rl_back"
+                android:layout_width="86px"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="20px"
+                    android:layout_height="38px"
+                    android:layout_marginLeft="24px"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/fanhui"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="登录"
+                android:textSize="32px"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="310px"
+            android:background="@mipmap/login_bg"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:background="@drawable/img_normal_shape16"
+            android:layout_marginLeft="60px"
+            android:layout_marginRight="60px"
+            android:layout_marginTop="60px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40px"
+                android:layout_height="48px"
+                android:layout_marginLeft="32px"
+                android:background="@mipmap/login_rw"/>
+
+            <EditText
+                android:id="@+id/e_zh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:digits="0123456789+-/.$#@*_"
+                android:padding="24px"
+                android:background="@null"
+                android:hint="账号/手机号"
+                android:textColorHint="#666666"
+                android:textSize="28px"
+                android:textColor="#333333"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:background="@drawable/img_normal_shape16"
+            android:layout_marginLeft="60px"
+            android:layout_marginRight="60px"
+            android:layout_marginTop="46px">
+
+            <ImageView
+                android:id="@+id/tu"
+                android:layout_width="40px"
+                android:layout_height="48px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="32px"
+                android:background="@mipmap/login_suo"/>
+
+            <EditText
+                android:id="@+id/e_mima"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:digits="0123456789
+            abcdefghijklmnopqrstuvwxyz
+            ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:password="true"
+                android:background="@null"
+                android:padding="24px"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tu"
+                android:layout_toLeftOf="@+id/img_yan"
+                android:hint="密码"
+                android:textColorHint="#666666"
+                android:textSize="28px"
+                android:textColor="#333333"/>
+
+            <ImageView
+                android:id="@+id/img_yan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="32px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/btn_yan"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_zc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:padding="20px"
+                android:layout_marginLeft="76px"
+                android:text="立即注册"
+                android:textSize="28px"
+                android:textColor="#ff9624"/>
+
+            <TextView
+                android:id="@+id/tv_wj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20px"
+                android:padding="20px"
+                android:layout_marginRight="76px"
+                android:text="忘记密码？"
+                android:textSize="28px"
+                android:textColor="#ff9624"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_longin"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="60px"
+            android:layout_marginRight="60px"
+            android:layout_gravity="center"
+            android:background="@drawable/img_normal_shape17"
+            android:layout_marginTop="60px"
+            android:text="登录"
+            android:textSize="34px"
+            android:textColor="@color/white"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100px">
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="第三方登录"
+                android:textSize="28px"
+                android:textColor="#666666"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginRight="20px"
+                android:layout_toLeftOf="@+id/tv_1"
+                android:layout_centerVertical="true"
+                android:background="#e9e9e9"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginLeft="20px"
+                android:layout_toRightOf="@+id/tv_1"
+                android:layout_centerVertical="true"
+                android:background="#e9e9e9"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginTop="48px">
+            <ImageView
+                android:id="@+id/image_QQ"
+                android:layout_width="80px"
+                android:layout_height="80px"
+                android:layout_marginLeft="160px"
+                android:background="@mipmap/qq"/>
+            <ImageView
+                android:id="@+id/image_weixin"
+                android:layout_width="80px"
+                android:layout_height="80px"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="160px"
+                android:background="@mipmap/weixin"/>
+            <!--<ImageView-->
+            <!--android:layout_width="80px"-->
+            <!--android:layout_height="80px"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="160px"-->
+            <!--android:background="@mipmap/xinlang"/>-->
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/image_daohangzc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/daohangzc"/>
+        <ImageView
+            android:id="@+id/image_daohang"
+            android:layout_width="204px"
+            android:layout_height="124px"
+            android:layout_marginTop="900px"
+            android:layout_marginRight="100px"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/wzd"/>
+    </RelativeLayout>
+
+</RelativeLayout>

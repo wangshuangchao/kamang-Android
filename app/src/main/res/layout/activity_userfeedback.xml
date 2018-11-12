@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hui"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="84px"
+        android:layout_below="@+id/view_1"
+        android:background="@color/white">
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="86px"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="20px"
+                android:layout_height="38px"
+                android:layout_marginLeft="24px"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/btn_jt"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="用户反馈"
+            android:textSize="32px"
+            android:textColor="#ff8e4a"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#e9e9e9"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_marginTop="32px"
+        android:layout_marginLeft="24px"
+        android:layout_marginRight="24px"
+        android:background="@drawable/img_normal_shape7"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="200px"
+            android:layout_height="match_parent"
+            android:background="@drawable/img_normal_shape8"
+            android:gravity="center"
+            android:text="问题概要"
+            android:textSize="30px"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:id="@+id/e_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:paddingLeft="24px"
+            android:paddingRight="10px"
+            android:singleLine="true"
+            android:hint="请输入反馈标题"
+            android:textSize="30px"
+            android:textColorHint="#999999"
+            android:textColor="#333333"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="376px"
+        android:layout_marginTop="32px"
+        android:layout_marginLeft="24px"
+        android:layout_marginRight="24px"
+        android:padding="24px"
+        android:background="@drawable/img_normal_shape7">
+        <EditText
+            android:id="@+id/e_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:lineSpacingExtra="10px"
+            android:hint="请详细描述您遇到的问题！"
+            android:textSize="30px"
+            android:textColorHint="#999999"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_tijiao"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_marginLeft="24px"
+        android:layout_marginRight="24px"
+        android:layout_marginTop="100px"
+        android:background="@drawable/img_normal_shape9"
+        android:text="提  交"
+        android:textSize="34px"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

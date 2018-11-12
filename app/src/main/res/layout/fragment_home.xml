@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/hui">
+    <include
+        android:id="@+id/view_t_1"
+        layout="@layout/activity_view"/>
+    <ListView
+        android:id="@+id/hemo_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_t_1"
+        android:divider="@null"
+        android:scrollbars="none"/>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/buy_layout_float"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/image_daohangzc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/homemp"/>
+        <ImageView
+            android:id="@+id/image_daohang"
+            android:layout_width="204px"
+            android:layout_height="124px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="900px"
+            android:background="@mipmap/wzd"/>
+    </RelativeLayout>
+
+    <!--<com.mugua.enterprise.util.DragFloatActionButton-->
+    <ImageView
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="100px"
+        android:background="@mipmap/hdan"
+        android:visibility="gone"/>
+
+</RelativeLayout>

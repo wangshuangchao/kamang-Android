@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hui"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/activity_view"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="84px"
+        android:layout_below="@+id/view_1"
+        android:background="@mipmap/tu_bg1">
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="86px"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="20px"
+                android:layout_height="38px"
+                android:layout_marginLeft="24px"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/fanhui"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="举报"
+            android:textSize="32px"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32px"
+        android:layout_marginLeft="24px"
+        android:text="请选择举报板块"
+        android:textSize="30px"
+        android:textColor="#999999"/>
+
+    <com.mugua.enterprise.util.MyGridView
+        android:id="@+id/my_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="24px"
+        android:layout_marginRight="24px"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="30px"
+        android:horizontalSpacing="32px"
+        android:numColumns="3"
+        android:layout_marginTop="32px"
+        android:scrollbars="none">
+    </com.mugua.enterprise.util.MyGridView>
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="360px"
+        android:layout_marginTop="32px"
+        android:layout_marginLeft="24px"
+        android:layout_marginRight="24px"
+        android:padding="24px"
+        android:background="@drawable/img_normal_shape7">
+        <EditText
+            android:id="@+id/e_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:lineSpacingExtra="10px"
+            android:minHeight="360px"
+            android:gravity="top"
+            android:hint="请在此输入举报内容"
+            android:textSize="30px"
+            android:textColorHint="#999999"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_xyb"
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:layout_marginTop="84px"
+        android:gravity="center"
+        android:paddingBottom="15px"
+        android:background="@mipmap/btn_yuan"
+        android:text="下一步"
+        android:textSize="34px"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_qian"
+        android:layout_width="220px"
+        android:layout_height="80px"
+        android:gravity="center"
+        android:background="@drawable/btn_tipoff"
+        android:text="100元"
+        android:textSize="34px"
+        android:textColor="#ff962c"/>
+
+</RelativeLayout>

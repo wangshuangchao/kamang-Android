@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120px"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/btn_item_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="20px"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_marginBottom="10px"
+            android:layout_above="@+id/tv1"
+            android:background="@color/white"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/botton_home"/>
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/shouye0"
+            android:textColor="@color/bottom_item_text_selectorhome"
+            android:textSize="24px"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_item_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20px"
+        android:background="@color/white"
+        android:layout_weight="1" >
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_marginBottom="10px"
+            android:layout_above="@+id/tv2"
+            android:background="@color/white"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/botton_live"/>
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/shouye1"
+            android:textColor="@color/bottom_item_text_selectorhome"
+            android:textSize="24px"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_item_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20px"
+        android:background="@color/white"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:id="@+id/img4"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_marginBottom="10px"
+            android:layout_above="@+id/tv4"
+            android:background="@color/white"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/botton_welfare"/>
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/shouye2"
+            android:textColor="@color/bottom_item_text_selectorhome"
+            android:textSize="24px"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_item_four"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20px"
+        android:background="@color/white"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:id="@+id/img5"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_marginBottom="10px"
+            android:layout_above="@+id/tv5"
+            android:background="@color/white"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/botton_me"/>
+
+        <TextView
+            android:id="@+id/tv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/shouye3"
+            android:textColor="@color/bottom_item_text_selectorhome"
+            android:textSize="24px"/>
+    </RelativeLayout>
+
+</LinearLayout>

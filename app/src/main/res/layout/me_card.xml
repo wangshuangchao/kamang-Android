@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="550px"
+            android:layout_height="620px"
+            android:background="@drawable/img_normal_shape7"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="160px"
+                android:layout_height="150px"
+                android:layout_marginTop="30px"
+                android:layout_gravity="center_horizontal"
+                android:background="@mipmap/dengpao"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60px"
+                android:layout_gravity="center_horizontal"
+                android:text="企业认证"
+                android:textSize="34px"
+                android:textColor="#ff962c"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60px"
+                android:layout_gravity="center_horizontal"
+                android:text="只需30秒"
+                android:textSize="30px"
+                android:textColor="#666666"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:layout_gravity="center_horizontal"
+                android:text="改变与企业有关的一切"
+                android:textSize="30px"
+                android:textColor="#666666"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="72px"
+                android:layout_marginLeft="32px"
+                android:layout_marginRight="32px">
+
+                <Button
+                    android:id="@+id/btn_zb"
+                    android:layout_width="218px"
+                    android:layout_height="88px"
+                    android:background="@drawable/img_normal_shape22"
+                    android:text="暂不"
+                    android:textSize="30px"
+                    android:textColor="#333333"/>
+
+                <Button
+                    android:id="@+id/btn_qrz"
+                    android:layout_width="218px"
+                    android:layout_height="88px"
+                    android:background="@drawable/img_normal_shape9"
+                    android:layout_alignParentRight="true"
+                    android:text="去认证"
+                    android:textSize="30px"
+                    android:textColor="@color/white"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="72px"
+            android:layout_height="72px"
+            android:layout_marginTop="60px"
+            android:layout_gravity="center_horizontal"
+            android:background="@mipmap/gb"/>
+    </LinearLayout>
+
+</RelativeLayout>

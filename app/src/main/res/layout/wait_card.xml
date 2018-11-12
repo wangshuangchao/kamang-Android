@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="590px"
+        android:layout_height="664px"
+        android:layout_centerInParent="true"
+        android:background="@drawable/img_normal_shape7">
+
+        <ImageView
+            android:id="@+id/img_gb"
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:layout_marginTop="24px"
+            android:layout_marginRight="24px"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/xhd"/>
+
+        <ImageView
+            android:layout_width="336px"
+            android:layout_height="332px"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/xm"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="332px"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="等待审核"
+                android:textSize="40px"
+                android:textColor="#ff962c"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="45px"
+                android:text="请耐心等待审核，审核结果会在"
+                android:textSize="28px"
+                android:textColor="#999999"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10px"
+                android:text="系统消息通知您！"
+                android:textSize="28px"
+                android:textColor="#999999"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_bg"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:background="@drawable/img_normal_shape14"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="朕知道了"
+            android:textSize="34px"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+</RelativeLayout>

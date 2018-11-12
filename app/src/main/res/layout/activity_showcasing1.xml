@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/activity_view"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="84px"
+        android:background="@mipmap/tu_bg1">
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="86px"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="20px"
+                android:layout_height="38px"
+                android:layout_marginLeft="24px"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/fanhui"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="公司详情"
+            android:textSize="32px"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:paddingLeft="24px"
+        android:paddingRight="24px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:src="@mipmap/qcc"/>
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24px"
+            android:text="公司详情"
+            android:textSize="30px"
+            android:textColor="#333333"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="24px"
+        android:background="@color/hui"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="24px"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="法定代表人"
+                android:textSize="26px"
+                android:textColor="#999999"/>
+            <TextView
+                android:id="@+id/tv_fddbr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="360px"
+                android:textSize="26px"
+                android:textColor="#333333"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60px">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="成立日期"
+                android:textSize="26px"
+                android:textColor="#999999"/>
+            <TextView
+                android:id="@+id/tv_cltime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="360px"
+                android:textSize="26px"
+                android:textColor="#333333"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60px">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="企业状态"
+                android:textSize="26px"
+                android:textColor="#999999"/>
+            <TextView
+                android:id="@+id/tv_qyzt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="360px"
+                android:textSize="26px"
+                android:textColor="#333333"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60px">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="注册号"
+                android:textSize="26px"
+                android:textColor="#999999"/>
+            <TextView
+                android:id="@+id/tv_zch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="360px"
+                android:textSize="26px"
+                android:textColor="#333333"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60px">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="社会统一信用代码"
+                android:textSize="26px"
+                android:textColor="#999999"/>
+            <TextView
+                android:id="@+id/tv_shtyxydm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="360px"
+                android:textSize="26px"
+                android:textColor="#333333"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_longin"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_marginLeft="24px"
+        android:layout_marginRight="24px"
+        android:layout_gravity="center"
+        android:background="@drawable/img_normal_shape6"
+        android:layout_marginTop="200px"
+        android:text="创建名片"
+        android:textSize="34px"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+</LinearLayout>

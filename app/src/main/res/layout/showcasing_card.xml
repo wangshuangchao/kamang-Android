@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="46px"
+        android:layout_height="135px"
+        android:layout_marginRight="24px"
+        android:layout_alignParentRight="true"
+        android:background="@mipmap/chahao"/>
+    <RelativeLayout
+        android:id="@+id/rl_2"
+        android:layout_width="match_parent"
+        android:layout_height="415px"
+        android:layout_below="@+id/img_back"
+        android:background="@drawable/img_normal_shape7">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:background="#FF962C"
+            android:layout_marginTop="30px"/>
+
+        <LinearLayout
+            android:id="@+id/rl_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10px"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="120px"
+                android:layout_height="120px"
+                android:layout_marginLeft="72px"
+                android:background="@drawable/img_yuan">
+                <com.mugua.enterprise.util.CircleImageView
+                    android:id="@+id/img_tx1"
+                    android:layout_width="105px"
+                    android:layout_height="105px"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/mr_tx"/>
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24px"
+                android:layout_gravity="center_vertical"
+                android:singleLine="true"
+                android:textSize="32px"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_1"
+            android:layout_marginLeft="72px"
+            android:layout_marginTop="15px"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:textSize="40px"
+            android:textColor="#FF962C"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_username"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="22px"
+                android:layout_marginLeft="40px"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="18px"
+                    android:layout_height="24px"
+                    android:background="@mipmap/card_jieshao"/>
+
+                <TextView
+                    android:id="@+id/tv_scope"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:textSize="24px"
+                    android:textColor="#333333"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="22px"
+                android:layout_marginLeft="40px"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="18px"
+                    android:layout_height="24px"
+                    android:background="@mipmap/card_dh"/>
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:textSize="24px"
+                    android:textColor="#333333"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="22px"
+                android:layout_marginLeft="40px"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="18px"
+                    android:layout_height="24px"
+                    android:background="@mipmap/card_dw"/>
+
+                <TextView
+                    android:id="@+id/tv_localize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:textSize="24px"
+                    android:textColor="#333333"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_ewm"
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20px"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="24px"
+            android:background="@drawable/img_normal_shape15"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_share"
+        android:layout_width="60px"
+        android:layout_height="92px"
+        android:layout_below="@+id/rl_2"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="64px"
+        android:background="@mipmap/fenxiang"/>
+
+    <ImageView
+        android:id="@+id/img_preservation"
+        android:layout_width="60px"
+        android:layout_height="92px"
+        android:layout_below="@+id/img_share"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="40px"
+        android:background="@mipmap/xiazai"/>
+
+</RelativeLayout>

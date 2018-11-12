@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hui"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/activity_view"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="84px"
+        android:gravity="center"
+        android:background="@mipmap/tu_bg1"
+        android:text="有料"
+        android:textSize="32px"
+        android:textColor="@color/white"/>
+
+    <education.yunxun.com.mylibrary.PullToRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/refresh_view"
+        android:background="@color/hui"
+        android:orientation="vertical">
+
+    <include layout="@layout/refresh_head"/>
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@color/hui"-->
+            <!--android:orientation="vertical">-->
+
+            <education.yunxun.com.mylibrary.PullableScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/hui">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/hui"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_yoliao"
+                        android:layout_width="match_parent"
+                        android:layout_height="90px"
+                        android:background="@color/white">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="46px"
+                                android:layout_height="46px"
+                                android:layout_marginLeft="24px"
+                                android:background="@mipmap/yl_sp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="24px"
+                                android:text="我也有料"
+                                android:textSize="30px"
+                                android:textColor="#333333"/>
+                        </LinearLayout>
+                        <ImageView
+                            android:layout_width="23px"
+                            android:layout_height="43px"
+                            android:layout_marginRight="24px"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@mipmap/yl_jt"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24px"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="32px"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="35px"
+                                android:layout_height="35px"
+                                android:background="@mipmap/yl_tj"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="22px"
+                                android:text="印尼特产大约翰"
+                                android:textSize="32px"
+                                android:textColor="#ff962c"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="品牌专场"
+                                android:textSize="32px"
+                                android:textColor="#333333"/>
+                        </LinearLayout>
+
+                        <com.mugua.enterprise.util.MyListView
+                            android:id="@+id/yl_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:divider="@null"
+                            android:scrollbars="none">
+                        </com.mugua.enterprise.util.MyListView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24px"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="32px"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="35px"
+                                android:layout_height="35px"
+                                android:background="@mipmap/yl_rm"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="22px"
+                                android:text="热卖"
+                                android:textSize="32px"
+                                android:textColor="#ff962c"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="商品"
+                                android:textSize="32px"
+                                android:textColor="#333333"/>
+                        </LinearLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/my_recyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:layout_marginTop="24px"
+                            android:layout_marginBottom="24px"
+                            android:scrollbars="none"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </education.yunxun.com.mylibrary.PullableScrollView>
+
+        <!--</LinearLayout>-->
+
+        <include layout="@layout/load_more"/>
+
+    </education.yunxun.com.mylibrary.PullToRefreshLayout>
+
+</LinearLayout>

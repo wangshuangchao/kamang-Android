@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/hui"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="24px"
+        android:background="@color/hui"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="164px"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <com.mugua.enterprise.util.imageview.XCRoundImageViewByXfermode
+            android:id="@+id/search_img"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="24px"
+            android:src="@mipmap/zwt"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32px"
+            android:layout_marginRight="24px"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.mugua.enterprise.util.MyTextViewgjz
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="30px"
+                android:textColor="#333333"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28px"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="26px"
+                    android:layout_height="28px"
+                    android:background="@mipmap/rtx"/>
+                <TextView
+                    android:id="@+id/tv_Legal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:textSize="24px"
+                    android:textColor="#999999"/>
+
+                <ImageView
+                    android:layout_width="26px"
+                    android:layout_height="28px"
+                    android:layout_marginLeft="32px"
+                    android:background="@mipmap/zijin"/>
+                <TextView
+                    android:id="@+id/tv_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:ems="5"
+                    android:layout_marginLeft="10px"
+                    android:textSize="24px"
+                    android:textColor="#999999"/>
+
+                <ImageView
+                    android:layout_width="26px"
+                    android:layout_height="28px"
+                    android:layout_marginLeft="32px"
+                    android:background="@mipmap/rili"/>
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:textSize="24px"
+                    android:textColor="#999999"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

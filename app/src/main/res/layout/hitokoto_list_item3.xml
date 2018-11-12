@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="540px"
+        android:layout_marginRight="24px"
+        android:layout_marginLeft="24px"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_marginTop="24px"
+            android:textColor="#333333"
+            android:textSize="28px"/>
+
+        <com.mugua.enterprise.util.imageview.XCRoundImageViewByXfermode
+            android:id="@+id/img_tutx"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_name"
+            android:layout_above="@+id/ll_1"
+            android:layout_marginTop="24px"
+            android:layout_marginBottom="24px"/>
+
+        <LinearLayout
+            android:id="@+id/ll_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24px"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/newType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_normal_shape2"
+                android:paddingRight="10px"
+                android:paddingLeft="10px"
+                android:paddingTop="5px"
+                android:paddingBottom="5px"
+                android:textColor="#44a7e6"
+                android:textSize="24px"/>
+
+            <ImageView
+                android:layout_width="36px"
+                android:layout_height="24px"
+                android:layout_marginLeft="40px"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/cxyj"/>
+
+            <TextView
+                android:id="@+id/tv_renshu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10px"
+                android:textColor="#999999"
+                android:textSize="28px"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginLeft="24px"
+        android:layout_marginRight="24px"
+        android:background="#e9e9e9"/>
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/secondLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include
+        android:id="@+id/view_t_1"
+        layout="@layout/activity_view"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_below="@+id/view_t_1"
+        android:background="@mipmap/tu_bg1"/>
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="70px"
+        android:layout_marginLeft="24px"
+        android:layout_marginRight="24px"
+        android:layout_marginTop="65px"
+        android:background="@drawable/img_normal_shape"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_1"
+            android:layout_width="35px"
+            android:layout_height="35px"
+            android:layout_marginLeft="32px"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/home_sousuo"/>
+
+        <TextView
+            android:id="@+id/home_e_sousuo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="32px"
+            android:hint="请输入企业名称"
+            android:textSize="30px"
+            android:textColorHint="#999999"
+            android:background="@null"/>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <include
+        layout="@layout/activity_view"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@mipmap/tu_bg1">
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="24px"
+            android:text="取消"
+            android:textSize="34px"
+            android:textColor="@color/white"/>
+
+        <LinearLayout
+            android:id="@+id/ll_seach"
+            android:layout_width="match_parent"
+            android:layout_height="70px"
+            android:layout_toLeftOf="@+id/tv_back"
+            android:layout_marginLeft="24px"
+            android:layout_marginRight="24px"
+            android:layout_centerVertical="true"
+            android:background="@drawable/img_normal_shape"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="35px"
+                android:layout_height="35px"
+                android:layout_marginLeft="32px"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/home_sousuo"/>
+
+            <TextView
+                android:id="@+id/tv_seach"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="32px"
+                android:textSize="28px"
+                android:textColor="#333333"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="84px"
+        android:background="@color/white">
+        <com.mugua.enterprise.util.MyTextViewgjz
+            android:id="@+id/tv_tiao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24px"
+            android:textSize="28px"
+            android:textColor="#333333"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#e9e9e9"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/searchdetails_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_mp"
+            android:background="@color/white"
+            android:divider="@null"
+            android:scrollbars="none">
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/ll_mp"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="没找到想要的结果，"
+                android:textSize="28px"
+                android:textColor="#333333"/>
+            <TextView
+                android:id="@+id/tv_mp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="创建名片"
+                android:textSize="28px"
+                android:textColor="#ff962c"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

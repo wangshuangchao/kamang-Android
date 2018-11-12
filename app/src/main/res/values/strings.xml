@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">咔芒</string>
+
+    <string name="shouye0">首页</string>
+    <string name="shouye1">一言</string>
+    <string name="shouye2">有料</string>
+    <string name="shouye3">我的</string>
+	
+	<string name="picker_time">时间选择器</string>
+    <string name="picker_province">条件选择器</string>
+
+    <string name="picker_custom_time">时间选择器自定义布局</string>
+    <string name="picker_custom_province">条件选择器自定义布局</string>
+    <string name="wdgs">请输入有关名片的故事（例如：＃我最喜爱的名片＃这是我第一次认识我老公时，他递给我的名片，当时只是觉得名片看起来很特别，就收起来了，没想到竟成了我们的定情信物。）</string>
+</resources>

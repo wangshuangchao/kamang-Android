@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/rl_tu"
+        android:layout_width="590px"
+        android:layout_height="754px"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:id="@+id/img_tupian"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/tv_cy"
+            android:layout_width="366px"
+            android:layout_height="80px"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="54px"
+            android:background="@drawable/img_normal_shape26"
+            android:gravity="center"
+            android:text="立即参与"
+            android:textSize="38px"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="72px"
+        android:layout_height="72px"
+        android:layout_below="@+id/rl_tu"
+        android:layout_marginTop="88px"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/bg_tu"/>
+
+</RelativeLayout>

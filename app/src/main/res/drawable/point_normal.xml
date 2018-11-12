@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval"
+    android:useLevel="true">
+
+    <size
+        android:height="150px"
+        android:width="150px" >
+    </size>
+
+    <!-- 描边 -->
+    <stroke
+        android:width="15px"
+        android:color="@color/white" /><!--  定义描边的宽度和描边的颜色值 -->
+
+</shape>
